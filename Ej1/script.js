@@ -10,24 +10,20 @@ const IMG_3 = "https://arquivo.devmedia.com.br/noticias/artigos/artigo_javascrip
 const ENLACE_1 = "https://erick-c3.github.io/Trayecto-de-Programador-/"
 const ENLACE_2 = "https://discord.com"
 const ENLACE_3 = "https://stackoverflow.com"
+
 let opcionRecibida = prompt("Ingrese la opcion estetica: 1, 2 o 3.");
 
+function modificarPagina(colorFundo,colorTexto,enlaceImg,enlacePagina){
+    cuerpoPagina.style.backgroundColor = colorFundo
+    cuerpoPagina.style.color = colorTexto
+    imgCambio.src = enlaceImg
+    enlaceCambio.href = enlacePagina
+}
+
 if (opcionRecibida == 1) {
-    console.log("Elegiste opc 1");
-    cuerpoPagina.style.backgroundColor = "orange"
-    cuerpoPagina.style.color = "black"
-    imgCambio.src = IMG_1
-    enlaceCambio.href = ENLACE_1
+    modificarPagina("orange","black",IMG_1,ENLACE_1);
 } else if (opcionRecibida == 2) {
-    console.log("Elegiste opc 2");
-    cuerpoPagina.style.backgroundColor = "black"
-    cuerpoPagina.style.color = "white"
-    imgCambio.src = IMG_2
-    enlaceCambio.href = ENLACE_2
+    modificarPagina("black","white",IMG_2,ENLACE_2);
 } else if (opcionRecibida == 3){
-    console.log("Elegiste opc 3");
-    cuerpoPagina.style.backgroundColor = "pink"
-    cuerpoPagina.style.color = "green"
-    imgCambio.src = IMG_3
-    enlaceCambio.href = ENLACE_3
+    modificarPagina("pink","green",IMG_3,ENLACE_3);
 }
